@@ -24,8 +24,4 @@
     <Compile Remove="Controllers\EventsCOntroller2.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

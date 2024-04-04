@@ -60,7 +60,7 @@ public class RegisterAttendeeOnEventUseCase
         var attendeeAlreadyRegistered = _dbContext.Attendees.Any(at => at.Email.Equals(request.Email) && at.Event_Id == eventId);
         if (attendeeAlreadyRegistered)
         {
-            throw new ErrorOnValidationException("The user is already registered in that event");
+            throw new ConflictException("The user is already registered in that event");
         }
 
         var attendeesForEvent = _dbContext.Attendees.Count(at => at.Event_Id == eventId);

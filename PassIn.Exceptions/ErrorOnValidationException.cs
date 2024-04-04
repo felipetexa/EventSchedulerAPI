@@ -1,9 +1,9 @@
 namespace PassIn.Exceptions;
 
-public class ErrorOnValidationException(string message) : PassInException(message)
+public class ErrorOnValidationException: SystemException
 {
-    // public ErrorOnValidationException(string message) : base(message)
-    // {
-    //     
-    // }
+    public ErrorOnValidationException(string message) : base(message)
+    {
+        
+    }
 }

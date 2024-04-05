@@ -32,7 +32,7 @@ public class ExceptionFilter : IExceptionFilter
         {
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
             context.Result = new BadRequestObjectResult(new ResponseErrorJson(context.Exception.Message));
-        } 
+        }
         else if (context.Exception is ConflictException)
         {
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.Conflict;
